@@ -1,0 +1,807 @@
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+@font-face {
+    font-family: 'Gilbert Color Bold Preview5';
+    src: url('fonts/GilbertColorBoldPreview5.woff2') format('woff2'),
+        url('fonts/GilbertColorBoldPreview5.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Mencap';
+    src: url('fonts/FSMencap.woff2') format('woff2'),
+        url('fonts/FSMencap.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Mencap Bold';
+    src: url('fonts/FSMencap-Bold.woff2') format('woff2'),
+        url('fonts/FSMencap-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: #fff;
+  color: #222;
+  font-family: "FS Mencap", sans-serif;
+}
+
+a {
+  color: #b4025a;
+  transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+  color: #b4025a;
+  outline: none;
+  text-decoration: none;
+}
+
+a.mencap {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 3px; 
+}
+
+a.mencap:hover {
+  background-color: #b4025a;
+  color: #fff;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "FS Mencap", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: #b4025a;
+  color: #fff;
+  padding: 6px 12px 9px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+.back-to-top:focus {
+  background: #a10250;
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #a10250;
+  color: #fff;
+}
+
+.qna {
+  padding: 0 20%;
+  text-align: left;
+  font-size: 22px;
+  list-style-type: none;
+}
+
+.question {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.answer {
+  margin-bottom: 80px;
+}
+
+li.question:before {
+    content: "Q: ";
+}
+li.answer:before {
+    content: "A: ";
+    font-weight: bold;
+}
+
+.childprotection {
+  padding: 0 20%;
+  text-align: left;
+  font-size: 22px;
+}
+
+li.stages {
+  list-style-type: none;
+  padding-bottom: 2%;
+}
+
+li.stages0 {
+  font-weight: bold;
+  list-style-type: none;
+}
+
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+#topbar {
+  background: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+#topbar .contact-info a {
+  line-height: 1;
+  color: #222;
+}
+
+#topbar .contact-info a:hover {
+  color: #b4025a;
+}
+
+#topbar .contact-info i {
+  color: #b4025a;
+  padding: 4px;
+}
+
+#topbar .contact-info .fa-phone {
+  padding-left: 20px;
+  margin-left: 20px;
+  border-left: 1px solid #e9e9e9;
+}
+
+#topbar .social-links a {
+  color: #222;
+  padding: 4px 12px;
+  display: inline-block;
+  line-height: 1px;
+  border-left: 1px solid #e9e9e9;
+}
+
+#topbar .social-links a:hover {
+  color: #b4025a;
+}
+
+#topbar .social-links a:first-child {
+  border-left: 0;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  padding: 20px 0;
+  height: 120px;
+  transition: all 0.5s;
+  z-index: 997;
+  background: #fff;
+}
+
+#header #logo h1 {
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "FS Mencap", sans-serif;
+  font-weight: 700;
+}
+
+#header #logo h1 a {
+  color: #b4025a;
+  line-height: 1;
+  display: inline-block;
+}
+
+#header #logo h1 a span {
+  color: #b4025a;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 80px; /* Set maximum height for the logo */
+}
+
+@media (max-width: 800px) { /* Adjusted the media query */
+  #header #logo h1 {
+    font-size: 24px;
+  }
+  #header #logo img {
+    max-height: 80px; /* Adjusted maximum height for smaller screens */
+  }
+}
+
+/*--------------------------------------------------------------
+# content Section
+--------------------------------------------------------------*/
+#content {
+  width: 100%;
+  height: auto; /* Changed to auto to accommodate varying content height */
+  position: relative;
+  background-color: #ffffff;
+}
+
+p.content {
+  padding: 0 20%;
+  font-size: 22px;
+  text-align: left;
+}
+
+p.content-partner {
+  padding: 0 20%;
+  font-size: 22px;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#content .content {
+  position: relative; /* Changed to relative to allow for proper stacking */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+  #content .content-content h2 {
+    font-size: 40px; /* Adjusted font size for mobile */
+  }
+
+  #content .content p.content {
+    padding: 0 4%; /* Adjusted padding for mobile */
+  }
+
+  p.content-partner {
+    padding: 0 4%; /* Adjusted padding for mobile */
+  }
+
+  .qna {
+    padding: 0 4%; /* Adjusted padding for mobile */
+  }
+
+  .childprotection {
+    padding: 0 10%; /* Adjusted padding for mobile */
+  }
+}
+
+h2.intro {
+  font-size: 8em;
+  font-weight: 700;
+  font-family: Gilbert Color;
+  text-align: center;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  h2.intro {
+    font-size: 4em; /* Set font size for mobile devices */
+  }
+}
+
+.seemyability {
+  max-height: auto; 
+  width: 100%;
+  padding: 0 20%;
+}
+
+@media (max-width: 800px) {
+    .seemyability {
+        padding: 0 4%;
+    }
+}
+
+h2.contentheading {
+  font-size: 4.4em; /* Adjust the value as needed */
+  max-width: 100%; /* Ensure the heading doesn't exceed the width of its container */
+  font-weight: 700;
+  color: #b4025a;
+  margin-left: 0; /* Remove any default margin */
+  padding: 0 20%;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+    h2.contentheading {
+        padding: 0 4%;
+        font-size: 2.2em;
+    }
+}
+
+.tagline {
+  font-size: 88px;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .tagline{
+        font-size: 2em;
+    }
+}
+
+span.membershiplinks, span.governancelinks{
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2%;
+  color: #b4025a;
+}
+
+span.agencies {
+  font-size: 44px;
+  font-weight: bold;
+  padding-top: 2%;
+  color: #b4025a;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+  padding-right: 22px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 8px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+#nav-menu-container {
+  float: right;
+  margin: 0;
+  line-height: 4;
+}
+
+@media (max-width: 768px) {
+  #nav-menu-container {
+    display: none;
+  }
+}
+
+/* Nav Meu Styling */
+.nav-menu a {
+  padding: 10px 8px;
+  text-decoration: none;
+  display: inline-block;
+  color: #222;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-menu li:hover > a, .nav-menu > .menu-active > a {
+  color: #b4025a;
+}
+
+.nav-menu > li {
+  margin-left: 10px;
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 0;
+  padding: 10px;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background: #fff;
+}
+
+.nav-menu ul li {
+  transition: 0.3s;
+}
+
+.nav-menu ul li a {
+  padding: 2px;
+  color: #333;
+  transition: 0.3s;
+  display: block;
+  font-size: 13px;
+  text-transform: none;
+}
+
+.nav-menu ul li:hover > a {
+  color: #b4025a;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 20px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+  color: #222;
+}
+
+@media (max-width: 768px) {
+  #mobile-nav-toggle {
+    display: inline;
+  }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(52, 59, 64, 0.9);
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: #fff;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: #b4025a;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #b4025a;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(52, 59, 64, 0.9);
+  display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+
+/* Hide mobile-only links by default */
+.mobile-only {
+  display: none;
+}
+
+/* Show mobile-only links on smaller screens */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+  
+  /* Ensure the mobile menu is displayed in a column */
+  .nav-menu {
+    flex-direction: column;
+  }
+  
+  .nav-menu > li {
+    margin-left: 0;
+  }
+  
+  .nav-menu.expanded {
+    display: flex;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+/* Sections Header
+--------------------------------*/
+.section-header {
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  color: #b4025a;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-header h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #b4025a;
+  bottom: 0;
+  left: 0;
+}
+
+.section-header p {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Contact Section
+--------------------------------*/
+#contact {
+  padding: 30px 0;
+}
+
+#contact .contact-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contact .contact-info i {
+  font-size: 48px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #b4025a;
+}
+
+#contact .contact-info address, #contact .contact-info p {
+  margin-bottom: 0;
+  color: #000;
+}
+
+#contact .contact-info h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #999;
+}
+
+#contact .contact-info a {
+  color: #000;
+}
+
+#contact .contact-info a:hover {
+  color: #b4025a;
+}
+
+#contact .contact-address, #contact .contact-phone, #contact .contact-email {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #contact .contact-address, #contact .contact-phone, #contact .contact-email {
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #contact .contact-phone {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+}
+
+#contact #google-map {
+  height: 290px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  #contact #google-map {
+    margin-top: 20px;
+  }
+}
+
+#contact .form #sendmessage {
+  color: #b4025a;
+  border: 1px solid #b4025a;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #errormessage {
+  color: red;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show {
+  display: block;
+}
+
+#contact .form .validation {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#contact .form input, #contact .form textarea {
+  padding: 10px 14px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 15px;
+}
+
+#contact .form button[type="submit"] {
+  background: #b4025a;
+  border: 0;
+  border-radius: 3px;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#contact .form button[type="submit"]:hover {
+  background: #2dc899;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background-color: #f2f5f8; /* Example background color for the footer */
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  text-align: left; /* Ensures the text within the span is left-aligned */
+}
+
+.footer-image-container {
+  margin-right: 40px; /* Adds some padding between the image and the text */
+}
+
+.footer-image {
+  max-height: 100px; /* Ensures the image height does not exceed a certain height */
+  width: auto; /* Maintains the aspect ratio of the image */
+}
+
+.footer-text {
+  display: inline-block;
+}
+
+.footer-text a {
+  text-decoration: none;
+  color: #b4025a;
+}
